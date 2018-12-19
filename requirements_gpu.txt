@@ -3,3 +3,4 @@ pandas
 tensorflow-gpu
 matplotlib
 scikit-learn
+jupyter
