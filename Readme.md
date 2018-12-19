@@ -17,3 +17,15 @@ I like to keep the Python setup in my OS very simple and create virtual environm
 Further reading on how to setup conda environments: [Here](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
 
 ### Using Python virtualenv
+I prefer conda because numpy, pandas and tensorflow CPU operations are much faster than when used with pip according to this [article](https://towardsdatascience.com/stop-installing-tensorflow-using-pip-for-performance-sake-5854f9d9eb0c). But if you prefer to use Python virtualenv, use the following steps.
+
+1. Download and install Python 3.5
+2. Now install `virtualenv` with `pip3 install virtualenv`
+3. `cd` into the project directory
+4. Create a virtual environment with `virtualenv -p <path to python 3.5> datacamp.tutorials`
+5. Activate the virtual environment as follows
+	* If you are on **Windows**: `<project_dir>\datacamp.tutorials\Scripts\activate`
+	* If you are on **Ubuntu**: `source <project_dir>\datacamp.tutorials\bin\activate`
+6. Install tensorflow as follows
+	* If you **do not** have a GPU use: `pip3 install -r requirements.txt`
+	* If you **do** have a GPU use: `pip3 install -r requirements_gpu.txt`
